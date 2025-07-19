@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Button } from "@/components/ui/button";
 import {
   ClerkProvider,
   SignedIn,
@@ -36,10 +37,15 @@ export default function RootLayout({
         <body>
           <header className="p-4 border-b">
             <SignedOut>
-              <SignInButton />
-              <SignUpButton />
+              <SignInButton>
+                <Button>Sign In</Button>
+              </SignInButton>
+              <SignUpButton>
+                <Button>Sign Out</Button>
+              </SignUpButton>
             </SignedOut>
             <SignedIn>
+              Signed in!
               <UserButton />
             </SignedIn>
           </header>
