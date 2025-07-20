@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import { Button } from "@/components/ui/button";
 import {
@@ -37,11 +39,11 @@ export default function RootLayout({
         <body>
           <header className="p-4 border-b">
             <SignedOut>
-              <SignInButton>
+              <SignInButton forceRedirectUrl="/dashboard" mode="redirect">
                 <Button>Sign In</Button>
               </SignInButton>
-              <SignUpButton>
-                <Button>Sign Out</Button>
+              <SignUpButton forceRedirectUrl="/dashboard" mode="redirect">
+                <Button>Sign Up</Button>
               </SignUpButton>
             </SignedOut>
             <SignedIn>
