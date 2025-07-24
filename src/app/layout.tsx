@@ -47,6 +47,9 @@ export default function RootLayout({
               </SignUpButton>
             </SignedOut>
             <SignedIn>
+              <Button asChild className="absolute top-4 right-4">
+                <Link href="/add-gig">Add Gig</Link>
+              </Button>
               Signed in!
               <UserButton />
             </SignedIn>
