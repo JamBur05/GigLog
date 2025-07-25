@@ -50,6 +50,9 @@ export default function RootLayout({
               <Button asChild className="absolute top-4 right-4">
                 <Link href="/add-gig">Add Gig</Link>
               </Button>
+              <Button asChild className="absolute top-4 right-28">
+                <Link href="/dashboard">Dashboard</Link>
+              </Button>
               Signed in!
               <UserButton />
             </SignedIn>

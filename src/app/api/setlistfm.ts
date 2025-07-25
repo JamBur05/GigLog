@@ -20,5 +20,7 @@ export async function fetchSetlistsByArtist(artistName: string) {
     throw new Error(`Failed to fetch setlists: ${res.statusText}`);
   }
 
-  return res.json();
+  const data = await res.json();
+
+  return data.setlist || [];
 }
